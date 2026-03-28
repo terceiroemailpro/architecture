@@ -1,1 +1,1 @@
-export { default as MixingMain } from "./MixingMain";
+export { default as MixingMain } from "./ui/MixingMain";
