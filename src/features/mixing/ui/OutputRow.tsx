@@ -1,9 +1,8 @@
 import { Trash2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
-import { MIXING_CONFIG } from "../config";
 import { MIXING_CONTENT } from "../content";
-import { isOutputAddressValid } from "../domain/mixing-policies";
+import { checkOutputAddressValid } from "../application/mixing-actions";
 import type { MixingOutput } from "../domain/mixing-output";
 
 interface OutputRowProps {
@@ -12,10 +11,12 @@ interface OutputRowProps {
   onChange: (i: number, field: keyof MixingOutput, value: string | number) => void;
   onRemove: (i: number) => void;
   canRemove: boolean;
+  delayMin: number;
+  delayMax: number;
 }
 
-export function OutputRow({ output, index, onChange, onRemove, canRemove }: OutputRowProps) {
-  const isValidAddr = isOutputAddressValid(output);
+export function OutputRow({ output, index, onChange, onRemove, canRemove, delayMin, delayMax }: OutputRowProps) {
+  const isValidAddr = checkOutputAddressValid(output);
 
   return (
     <div className="p-4 rounded-lg border border-border/50 bg-card space-y-3">
@@ -58,8 +59,8 @@ export function OutputRow({ output, index, onChange, onRemove, canRemove }: Outp
           <Slider
             value={[output.delay]}
             onValueChange={([v]) => onChange(index, "delay", v)}
-            min={MIXING_CONFIG.MIN_DELAY_HOURS}
-            max={MIXING_CONFIG.MAX_DELAY_HOURS}
+            min={delayMin}
+            max={delayMax}
             step={0.5}
           />
         </div>
