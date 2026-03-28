@@ -52,3 +52,4 @@ export function checkOutputAddressValid(output: MixingOutput): boolean {
 }
 
 export { createDefaultOutputs } from "./create-default-outputs";
+export { MIXING_CONFIG } from "../domain/mixing-policies";

@@ -13,8 +13,8 @@ import {
   removeMixingOutput,
   updateMixingOutput,
   createDefaultOutputs,
+  MIXING_CONFIG,
 } from "../application/mixing-actions";
-import { MIXING_CONFIG } from "../domain/mixing-policies";
 import type { MixingOutput } from "../domain/mixing-output";
 import { OutputRow } from "./OutputRow";
 
