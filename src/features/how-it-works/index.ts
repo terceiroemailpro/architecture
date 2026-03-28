@@ -1,1 +1,1 @@
-export { default as HowItWorksMain } from "./HowItWorksMain";
+export { default as HowItWorksMain } from "./ui/HowItWorksMain";
