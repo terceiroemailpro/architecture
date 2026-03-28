@@ -1,12 +1,5 @@
 import type { MixingOutput } from "./mixing-output";
-
-export interface FeeBreakdown {
-  amount: number;
-  serviceFee: number;
-  networkFee: number;
-  totalFee: number;
-  received: number;
-}
+import type { FeeBreakdown } from "@/shared/pricing";
 
 export interface MixingSession {
   amount: number;
