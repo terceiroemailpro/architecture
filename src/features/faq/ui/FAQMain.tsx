@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FAQ_CONTENT } from "@/shared/content/texts";
+import { FAQ_CONTENT } from "../content";
 
 export default function FAQMain() {
   return (

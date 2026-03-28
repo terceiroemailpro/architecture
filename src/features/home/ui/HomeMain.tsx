@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Eye, Zap } from "lucide-react";
-import { HOME_CONTENT } from "@/shared/content/texts";
+import { HOME_CONTENT } from "../content";
 import { DISCLAIMER } from "@/shared/content/disclaimer";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +25,6 @@ function StepCard({ step }: { step: typeof HOME_CONTENT.steps[number] }) {
 export default function HomeMain() {
   return (
     <div className="relative">
-      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-gradient-radial" />
@@ -60,7 +59,6 @@ export default function HomeMain() {
         </div>
       </section>
 
-      {/* Steps */}
       <section className="container py-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground">Simples. Seguro. Privado.</h2>
@@ -72,7 +70,6 @@ export default function HomeMain() {
         </div>
       </section>
 
-      {/* Transparency & Risks */}
       <section className="container py-20 border-t border-border/50">
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
@@ -115,7 +112,6 @@ export default function HomeMain() {
         </div>
       </section>
 
-      {/* Disclaimer */}
       <section className="container pb-20">
         <div className="p-4 rounded-lg border border-border/50 bg-card/50 text-xs text-muted-foreground font-mono leading-relaxed">
           {DISCLAIMER.legal}

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { NAV_ITEMS } from "@/shared/content/navigation";
+import { NAV_ITEMS } from "./navigation";
 import { useState } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";

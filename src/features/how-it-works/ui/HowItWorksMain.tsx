@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownToLine, Shuffle, ArrowUpFromLine } from "lucide-react";
-import { HOW_IT_WORKS_CONTENT } from "@/shared/content/texts";
+import { HOW_IT_WORKS_CONTENT } from "../content";
 
 const ICONS = {
   ArrowDownToLine,

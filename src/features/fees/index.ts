@@ -1,1 +1,1 @@
-export { default as FeesMain } from "./FeesMain";
+export { default as FeesMain } from "./ui/FeesMain";

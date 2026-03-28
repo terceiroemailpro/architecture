@@ -1,4 +1,4 @@
-export const SIMULATOR_CONFIG = {
+export const MIXING_CONFIG = {
   SERVICE_FEE: 0.015,
   NETWORK_FEE: 0.0001,
   MIN_AMOUNT: 0.001,

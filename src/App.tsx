@@ -4,13 +4,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppLayout } from "@/shared/ui/AppLayout";
-import Index from "./pages/Index";
-import HowItWorks from "./pages/HowItWorks";
-import Mixer from "./pages/Mixer";
-import Fees from "./pages/Fees";
-import FAQ from "./pages/FAQ";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import { HomeMain } from "@/features/home";
+import { HowItWorksMain } from "@/features/how-it-works";
+import { MixingMain } from "@/features/mixing";
+import { FeesMain } from "@/features/fees";
+import { FAQMain } from "@/features/faq";
+import { ContactMain } from "@/features/contact";
+import { NotFoundMain } from "@/features/not-found";
 
 const queryClient = new QueryClient();
 
@@ -22,13 +22,13 @@ const App = () => (
       <BrowserRouter>
         <AppLayout>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/como-funciona" element={<HowItWorks />} />
-            <Route path="/mixer" element={<Mixer />} />
-            <Route path="/taxas" element={<Fees />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contato" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<HomeMain />} />
+            <Route path="/como-funciona" element={<HowItWorksMain />} />
+            <Route path="/mixer" element={<MixingMain />} />
+            <Route path="/taxas" element={<FeesMain />} />
+            <Route path="/faq" element={<FAQMain />} />
+            <Route path="/contato" element={<ContactMain />} />
+            <Route path="*" element={<NotFoundMain />} />
           </Routes>
         </AppLayout>
       </BrowserRouter>

@@ -1,9 +1,10 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
-import { FEES_CONTENT } from "@/shared/content/texts";
-import { SIMULATOR_CONFIG } from "@/shared/config/simulator.config";
-import { calculateFees, formatBTC } from "@/shared/utils";
+import { FEES_CONTENT } from "../content";
+import { MIXING_CONFIG } from "@/features/mixing/config";
+import { calculateFees } from "@/features/mixing/application/calculate-fees";
+import { formatBTC } from "@/shared/utils/format";
 
 export default function FeesMain() {
   const [amount, setAmount] = useState("1");
@@ -18,35 +19,33 @@ export default function FeesMain() {
           <p className="mt-4 text-lg text-muted-foreground">{FEES_CONTENT.subtitle}</p>
         </div>
 
-        {/* Rate Info */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           <div className="p-4 rounded-lg border border-border/50 bg-card text-center">
             <p className="text-xs text-muted-foreground font-mono mb-1">{FEES_CONTENT.breakdown.service.label}</p>
-            <p className="text-2xl font-bold text-primary">{(SIMULATOR_CONFIG.SERVICE_FEE * 100).toFixed(1)}%</p>
+            <p className="text-2xl font-bold text-primary">{(MIXING_CONFIG.SERVICE_FEE * 100).toFixed(1)}%</p>
             <p className="text-xs text-muted-foreground mt-1">{FEES_CONTENT.breakdown.service.description}</p>
           </div>
           <div className="p-4 rounded-lg border border-border/50 bg-card text-center">
             <p className="text-xs text-muted-foreground font-mono mb-1">{FEES_CONTENT.breakdown.network.label}</p>
-            <p className="text-2xl font-bold text-accent">{SIMULATOR_CONFIG.NETWORK_FEE} BTC</p>
+            <p className="text-2xl font-bold text-accent">{MIXING_CONFIG.NETWORK_FEE} BTC</p>
             <p className="text-xs text-muted-foreground mt-1">{FEES_CONTENT.breakdown.network.description}</p>
           </div>
         </div>
 
-        {/* Simulator */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="p-6 rounded-lg border border-primary/20 bg-primary/5"
         >
-          <h2 className="text-lg font-semibold text-foreground mb-4">Simulador de Taxas</h2>
+          <h2 className="text-lg font-semibold text-foreground mb-4">{FEES_CONTENT.simulatorTitle}</h2>
           <div className="mb-6">
-            <label className="text-sm text-muted-foreground block mb-2">Valor em BTC</label>
+            <label className="text-sm text-muted-foreground block mb-2">{FEES_CONTENT.amountLabel}</label>
             <Input
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               className="font-mono text-lg"
-              min={SIMULATOR_CONFIG.MIN_AMOUNT}
+              min={MIXING_CONFIG.MIN_AMOUNT}
               step={0.01}
             />
           </div>
@@ -54,19 +53,19 @@ export default function FeesMain() {
           {parsedAmount > 0 && (
             <div className="space-y-3 font-mono text-sm">
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Valor enviado:</span>
+                <span className="text-muted-foreground">{FEES_CONTENT.summaryLabels.sent}</span>
                 <span className="text-foreground">{formatBTC(parsedAmount)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Taxa de serviço:</span>
+                <span className="text-muted-foreground">{FEES_CONTENT.summaryLabels.serviceFee}</span>
                 <span className="text-foreground">- {formatBTC(fees.serviceFee)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Taxa de rede:</span>
+                <span className="text-muted-foreground">{FEES_CONTENT.summaryLabels.networkFee}</span>
                 <span className="text-foreground">- {formatBTC(fees.networkFee)}</span>
               </div>
               <div className="border-t border-border/50 pt-3 flex justify-between">
-                <span className="text-foreground font-semibold">Você recebe:</span>
+                <span className="text-foreground font-semibold">{FEES_CONTENT.summaryLabels.received}</span>
                 <span className="text-primary font-bold">{formatBTC(fees.received)}</span>
               </div>
             </div>

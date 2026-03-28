@@ -4,8 +4,9 @@ import { Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { CONTACT_CONTENT } from "@/shared/content/texts";
-import { generateTicketId } from "@/shared/utils";
+import { CONTACT_CONTENT } from "../content";
+import { createContactTicket } from "../application/create-contact-ticket";
+import { isContactFormValid } from "../domain/contact-policies";
 
 export default function ContactMain() {
   const [subject, setSubject] = useState("");
@@ -14,8 +15,10 @@ export default function ContactMain() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!subject.trim() || !message.trim()) return;
-    setTicketId(generateTicketId());
+    const result = createContactTicket(subject, message);
+    if (result.success && result.ticket) {
+      setTicketId(result.ticket.ticketId);
+    }
   };
 
   return (
@@ -48,7 +51,7 @@ export default function ContactMain() {
               <Input
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                placeholder="Resumo da sua questão"
+                placeholder={CONTACT_CONTENT.form.subjectPlaceholder}
               />
             </div>
             <div>
@@ -56,12 +59,12 @@ export default function ContactMain() {
               <Textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Descreva sua situação..."
+                placeholder={CONTACT_CONTENT.form.messagePlaceholder}
                 rows={6}
               />
             </div>
             <p className="text-xs text-muted-foreground font-mono">{CONTACT_CONTENT.note}</p>
-            <Button type="submit" className="w-full glow-primary gap-2" size="lg" disabled={!subject.trim() || !message.trim()}>
+            <Button type="submit" className="w-full glow-primary gap-2" size="lg" disabled={!isContactFormValid(subject, message)}>
               <Send className="w-4 h-4" />
               {CONTACT_CONTENT.form.submit}
             </Button>

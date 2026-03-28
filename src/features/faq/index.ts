@@ -1,1 +1,1 @@
-export { default as FAQMain } from "./FAQMain";
+export { default as FAQMain } from "./ui/FAQMain";
