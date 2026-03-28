@@ -6,12 +6,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CONTACT_CONTENT } from "../content";
 import { createContactTicket } from "../application/create-contact-ticket";
-import { isContactFormValid } from "../domain/contact-policies";
+import { getContactFormState } from "../application/get-contact-form-state";
 
 export default function ContactMain() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [ticketId, setTicketId] = useState<string | null>(null);
+
+  const { canSubmit } = getContactFormState(subject, message);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,7 +66,7 @@ export default function ContactMain() {
               />
             </div>
             <p className="text-xs text-muted-foreground font-mono">{CONTACT_CONTENT.note}</p>
-            <Button type="submit" className="w-full glow-primary gap-2" size="lg" disabled={!isContactFormValid(subject, message)}>
+            <Button type="submit" className="w-full glow-primary gap-2" size="lg" disabled={!canSubmit}>
               <Send className="w-4 h-4" />
               {CONTACT_CONTENT.form.submit}
             </Button>

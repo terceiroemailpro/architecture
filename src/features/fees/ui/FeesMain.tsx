@@ -2,8 +2,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { FEES_CONTENT } from "../content";
-import { MIXING_CONFIG } from "@/features/mixing/config";
-import { calculateFees } from "@/features/mixing/application/calculate-fees";
+import { PRICING_CONFIG, calculateFees } from "@/shared/pricing";
 import { formatBTC } from "@/shared/utils/format";
 
 export default function FeesMain() {
@@ -22,12 +21,12 @@ export default function FeesMain() {
         <div className="grid grid-cols-2 gap-4 mb-8">
           <div className="p-4 rounded-lg border border-border/50 bg-card text-center">
             <p className="text-xs text-muted-foreground font-mono mb-1">{FEES_CONTENT.breakdown.service.label}</p>
-            <p className="text-2xl font-bold text-primary">{(MIXING_CONFIG.SERVICE_FEE * 100).toFixed(1)}%</p>
+            <p className="text-2xl font-bold text-primary">{(PRICING_CONFIG.SERVICE_FEE * 100).toFixed(1)}%</p>
             <p className="text-xs text-muted-foreground mt-1">{FEES_CONTENT.breakdown.service.description}</p>
           </div>
           <div className="p-4 rounded-lg border border-border/50 bg-card text-center">
             <p className="text-xs text-muted-foreground font-mono mb-1">{FEES_CONTENT.breakdown.network.label}</p>
-            <p className="text-2xl font-bold text-accent">{MIXING_CONFIG.NETWORK_FEE} BTC</p>
+            <p className="text-2xl font-bold text-accent">{PRICING_CONFIG.NETWORK_FEE} BTC</p>
             <p className="text-xs text-muted-foreground mt-1">{FEES_CONTENT.breakdown.network.description}</p>
           </div>
         </div>
@@ -45,7 +44,7 @@ export default function FeesMain() {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               className="font-mono text-lg"
-              min={MIXING_CONFIG.MIN_AMOUNT}
+              min={PRICING_CONFIG.MIN_AMOUNT}
               step={0.01}
             />
           </div>

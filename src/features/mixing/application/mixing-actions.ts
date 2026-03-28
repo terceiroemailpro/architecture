@@ -44,7 +44,7 @@ export function updateMixingOutput(
   field: keyof MixingOutput,
   value: string | number
 ): MixingOutput[] {
-  return outputs.map((o, idx) => (idx === i ? { ...o, [field]: value } : o));
+  return outputs.map((o, idx) => (idx === index ? { ...o, [field]: value } : o));
 }
 
 export function checkOutputAddressValid(output: MixingOutput): boolean {
