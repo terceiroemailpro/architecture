@@ -36,7 +36,7 @@ export default function HomeMain() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono mb-8">
               <Shield className="w-3.5 h-3.5" />
-              Privacidade descentralizada
+              Decentralized Privacy
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
               <span className="text-gradient-primary">{HOME_CONTENT.headline}</span>
@@ -46,13 +46,13 @@ export default function HomeMain() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="glow-primary font-semibold gap-2">
-                <Link to="/como-funciona">
+                <Link to="/mixer">
                   {HOME_CONTENT.cta}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-border/50">
-                <Link to="/mixer">Iniciar Mixing</Link>
+                <Link to="/how-it-works">How It Works</Link>
               </Button>
             </div>
           </motion.div>
@@ -61,7 +61,7 @@ export default function HomeMain() {
 
       <section className="container py-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground">Simples. Seguro. Privado.</h2>
+          <h2 className="text-3xl font-bold text-foreground">Simple. Secure. Private.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {HOME_CONTENT.steps.map((step) => (
