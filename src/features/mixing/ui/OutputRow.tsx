@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { MIXING_CONTENT } from "../content";
 import { checkOutputAddressValid } from "../application/mixing-actions";
-import type { MixingOutput } from "../domain/mixing-output";
+import type { MixingOutput } from "../application/mixing-actions";
 
 interface OutputRowProps {
   output: MixingOutput;

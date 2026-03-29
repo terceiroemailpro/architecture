@@ -15,7 +15,7 @@ import {
   createDefaultOutputs,
   MIXING_CONFIG,
 } from "../application/mixing-actions";
-import type { MixingOutput } from "../domain/mixing-output";
+import type { MixingOutput } from "../application/mixing-actions";
 import { OutputRow } from "./OutputRow";
 
 export default function MixingMain() {
