@@ -1,8 +1,8 @@
 export const NAV_ITEMS = [
-  { label: "Início", path: "/" },
-  { label: "Como Funciona", path: "/como-funciona" },
+  { label: "Home", path: "/" },
+  { label: "How It Works", path: "/how-it-works" },
   { label: "Mixer", path: "/mixer" },
-  { label: "Taxas", path: "/taxas" },
+  { label: "Fees", path: "/fees" },
   { label: "FAQ", path: "/faq" },
-  { label: "Contato", path: "/contato" },
+  { label: "Contact", path: "/contact" },
 ] as const;

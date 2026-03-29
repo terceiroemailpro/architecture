@@ -1,22 +1,22 @@
 export const FEES_CONTENT = {
-  title: "Taxas Transparentes",
-  subtitle: "Sem surpresas. Calcule exatamente quanto vai pagar.",
+  title: "Transparent Fees",
+  subtitle: "No surprises. Calculate exactly how much you will pay.",
   breakdown: {
     service: {
-      label: "Taxa de serviço",
-      description: "Percentual aplicado sobre o valor total",
+      label: "Service fee",
+      description: "Percentage applied to the total amount",
     },
     network: {
-      label: "Taxa de rede",
-      description: "Custo fixo da transação na blockchain",
+      label: "Network fee",
+      description: "Fixed blockchain transaction cost",
     },
   },
-  simulatorTitle: "Simulador de Taxas",
-  amountLabel: "Valor em BTC",
+  simulatorTitle: "Fee Simulator",
+  amountLabel: "Amount in BTC",
   summaryLabels: {
-    sent: "Valor enviado:",
-    serviceFee: "Taxa de serviço:",
-    networkFee: "Taxa de rede:",
-    received: "Você recebe:",
+    sent: "Amount sent:",
+    serviceFee: "Service fee:",
+    networkFee: "Network fee:",
+    received: "You receive:",
   },
 } as const;

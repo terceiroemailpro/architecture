@@ -1,13 +1,13 @@
 export const CONTACT_CONTENT = {
-  title: "Contato",
-  subtitle: "Envie sua mensagem. Nenhum dado pessoal é obrigatório.",
+  title: "Contact",
+  subtitle: "Send your message. No personal data is required.",
   form: {
-    subject: "Assunto",
-    message: "Mensagem",
-    submit: "Gerar Ticket",
-    success: "Ticket gerado com sucesso! Guarde seu código de referência.",
-    subjectPlaceholder: "Resumo da sua questão",
-    messagePlaceholder: "Descreva sua situação...",
+    subject: "Subject",
+    message: "Message",
+    submit: "Generate Ticket",
+    success: "Ticket generated successfully! Save your reference code.",
+    subjectPlaceholder: "Brief summary of your issue",
+    messagePlaceholder: "Describe your situation...",
   },
-  note: "Todas as comunicações são criptografadas. Você receberá um código de ticket para acompanhamento.",
+  note: "All communications are encrypted. You will receive a ticket code for follow-up.",
 } as const;

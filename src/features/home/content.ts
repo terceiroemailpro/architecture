@@ -1,39 +1,39 @@
 export const HOME_CONTENT = {
-  headline: "Privacidade Real para suas Transações",
-  subheadline: "Proteja sua identidade financeira com tecnologia de mixing avançada. Sem registros, sem rastreamento.",
+  headline: "Real Privacy for Your Transactions",
+  subheadline: "Protect your financial identity with advanced mixing technology. No logs, no tracking.",
   steps: [
     {
       number: "01",
-      title: "Envie",
-      description: "Deposite seus fundos no endereço gerado automaticamente.",
+      title: "Send",
+      description: "Deposit your funds to the automatically generated address.",
     },
     {
       number: "02",
-      title: "Misture",
-      description: "Seus fundos são fragmentados e misturados com outros em pools de liquidez.",
+      title: "Mix",
+      description: "Your funds are fragmented and mixed with others in liquidity pools.",
     },
     {
       number: "03",
-      title: "Receba",
-      description: "Fundos limpos são enviados para seus endereços de destino com delay configurável.",
+      title: "Receive",
+      description: "Clean funds are sent to your destination addresses with configurable delay.",
     },
   ],
-  cta: "Entender como funciona",
+  cta: "Start Mixing",
   transparency: {
-    title: "Transparência Total",
+    title: "Full Transparency",
     items: [
-      "Código-fonte auditável",
-      "Sem logs permanentes",
-      "Taxas claras e previsíveis",
-      "Riscos documentados",
+      "Auditable source code",
+      "No permanent logs",
+      "Clear and predictable fees",
+      "Documented risks",
     ],
   },
   risks: {
-    title: "Riscos que você deve conhecer",
+    title: "Risks You Should Know",
     items: [
-      "Transações blockchain são irreversíveis",
-      "Delays podem variar conforme a rede",
-      "Privacidade adicional, não absoluta",
+      "Blockchain transactions are irreversible",
+      "Delays may vary depending on the network",
+      "Additional privacy, not absolute",
     ],
   },
 } as const;

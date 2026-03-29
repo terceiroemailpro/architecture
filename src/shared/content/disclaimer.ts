@@ -1,6 +1,6 @@
 export const DISCLAIMER = {
-  legal: "Este serviço é fornecido apenas para fins educacionais e de privacidade. O uso para atividades ilegais é estritamente proibido.",
-  risk: "Transações em blockchain são irreversíveis. Verifique todos os endereços antes de confirmar.",
-  privacy: "Nenhum dado pessoal é armazenado. Logs são automaticamente destruídos após o processamento.",
-  noGuarantee: "Não garantimos anonimato absoluto. Utilize como camada adicional de privacidade.",
+  legal: "This service is provided for educational and privacy purposes only. Use for illegal activities is strictly prohibited.",
+  risk: "Blockchain transactions are irreversible. Verify all addresses before confirming.",
+  privacy: "No personal data is stored. Logs are automatically destroyed after processing.",
+  noGuarantee: "We do not guarantee absolute anonymity. Use as an additional layer of privacy.",
 } as const;

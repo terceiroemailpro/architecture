@@ -62,7 +62,7 @@ export default function MixingMain() {
             step={0.001}
           />
           <p className="text-xs text-muted-foreground mt-2 font-mono">
-            Mín: {PRICING_CONFIG.MIN_AMOUNT} BTC — Máx: {PRICING_CONFIG.MAX_AMOUNT} BTC
+            Min: {PRICING_CONFIG.MIN_AMOUNT} BTC — Max: {PRICING_CONFIG.MAX_AMOUNT} BTC
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function MixingMain() {
           {state.totalPercentage !== 100 && (
             <div className="flex items-center gap-2 p-3 rounded-md bg-warning/10 border border-warning/20 text-warning text-xs font-mono">
               <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-              Distribuição total: {state.totalPercentage}% (deve ser 100%)
+              Total distribution: {state.totalPercentage}% (must be 100%)
             </div>
           )}
         </div>

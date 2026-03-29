@@ -1,51 +1,51 @@
 export const FAQ_CONTENT = {
-  title: "Perguntas Frequentes",
-  subtitle: "Tudo que você precisa saber sobre o serviço.",
+  title: "Frequently Asked Questions",
+  subtitle: "Everything you need to know about the service.",
   categories: [
     {
-      name: "Geral",
+      name: "General",
       questions: [
         {
-          q: "O que é um mixer de criptomoedas?",
-          a: "Um mixer (ou tumbler) é um serviço que aumenta a privacidade de transações em blockchain, misturando seus fundos com os de outros usuários para dificultar o rastreamento.",
+          q: "What is a cryptocurrency mixer?",
+          a: "A mixer (or tumbler) is a service that enhances the privacy of blockchain transactions by mixing your funds with those of other users to make tracking difficult.",
         },
         {
-          q: "É legal usar um mixer?",
-          a: "O uso de mixers para fins de privacidade é legal na maioria das jurisdições. No entanto, o uso para lavagem de dinheiro ou outras atividades ilegais é proibido.",
+          q: "Is it legal to use a mixer?",
+          a: "Using mixers for privacy purposes is legal in most jurisdictions. However, using them for money laundering or other illegal activities is prohibited.",
         },
         {
-          q: "Meus fundos estão seguros?",
-          a: "Utilizamos múltiplas camadas de segurança. No entanto, como em qualquer serviço de blockchain, existem riscos inerentes. Nunca envie mais do que está disposto a perder.",
+          q: "Are my funds safe?",
+          a: "We use multiple layers of security. However, as with any blockchain service, there are inherent risks. Never send more than you are willing to lose.",
         },
       ],
     },
     {
-      name: "Técnico",
+      name: "Technical",
       questions: [
         {
-          q: "Quantas confirmações são necessárias?",
-          a: "São necessárias 3 confirmações na rede antes que seus fundos sejam processados.",
+          q: "How many confirmations are required?",
+          a: "3 confirmations on the network are required before your funds are processed.",
         },
         {
-          q: "Qual o delay mínimo e máximo?",
-          a: "O delay mínimo é de 30 minutos e o máximo é de 24 horas. Delays maiores aumentam a privacidade.",
+          q: "What is the minimum and maximum delay?",
+          a: "The minimum delay is 30 minutes and the maximum is 24 hours. Longer delays increase privacy.",
         },
         {
-          q: "Para quantos endereços posso distribuir?",
-          a: "Você pode distribuir para até 5 endereços de destino diferentes, com porcentagens personalizáveis.",
+          q: "How many addresses can I distribute to?",
+          a: "You can distribute to up to 5 different destination addresses with customizable percentages.",
         },
       ],
     },
     {
-      name: "Taxas",
+      name: "Fees",
       questions: [
         {
-          q: "Como as taxas são calculadas?",
-          a: "A taxa de serviço é de 1.5% sobre o valor total, mais uma taxa fixa de rede de 0.0001 BTC por transação.",
+          q: "How are fees calculated?",
+          a: "The service fee is 1.5% of the total amount, plus a fixed network fee of 0.0001 BTC per transaction.",
         },
         {
-          q: "Existem taxas escondidas?",
-          a: "Não. Todas as taxas são exibidas antes da confirmação. O que você vê é o que você paga.",
+          q: "Are there hidden fees?",
+          a: "No. All fees are displayed before confirmation. What you see is what you pay.",
         },
       ],
     },
