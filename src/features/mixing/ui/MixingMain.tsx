@@ -62,7 +62,7 @@ export default function MixingMain() {
             step={0.001}
           />
           <p className="text-xs text-muted-foreground mt-2 font-mono">
-            Mín: {PRICING_CONFIG.MIN_AMOUNT} BTC — Máx: {PRICING_CONFIG.MAX_AMOUNT} BTC
+            Min: {PRICING_CONFIG.MIN_AMOUNT} BTC — Max: {PRICING_CONFIG.MAX_AMOUNT} BTC
           </p>
         </motion.div>
 
